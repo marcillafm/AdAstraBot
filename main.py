@@ -4,6 +4,9 @@ from datetime import datetime, date, timedelta
 from pytz import timezone
 import calendar
 from keep_alive import keep_alive
+from dotenv import load_dotenv
+
+load_dotenv()
 
 #set client
 client = discord.Client()
