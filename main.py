@@ -13,7 +13,6 @@ client = discord.Client()
 
 #define timezone and weekday for U.S. users
 zone = timezone('Pacific/Gambier')
-day = datetime.now(tz=zone).strftime('%A')
 
 #When logging into repl.it
 @client.event
@@ -31,6 +30,7 @@ async def on_message(message):
     await message.channel.send('Ad Astra Abyssosque! Welcome to the Adventurers\' Guild.') 
 #!Daily command
   if message.content.startswith('!daily'):
+    day = datetime.now(tz=zone).strftime('%A')
     if day == 'Monday' or day == 'Thursday':
       await message.channel.send(file=discord.File('monday.png'))
     if day == 'Tuesday' or day == 'Friday':
