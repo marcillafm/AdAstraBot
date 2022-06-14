@@ -3,7 +3,6 @@ import os
 from datetime import datetime, date, timedelta
 from pytz import timezone
 import calendar
-from keep_alive import keep_alive
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -40,7 +39,5 @@ async def on_message(message):
     if day == 'Sunday':
       await message.channel.send(file=discord.File('sun.png'))
 
-#Uptime Robot
-keep_alive()
 #Connect to Discord Bot
 client.run(os.getenv('TOKEN'))
