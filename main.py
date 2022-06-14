@@ -32,13 +32,13 @@ async def on_message(message):
   if message.content.startswith('!daily'):
     day = datetime.now(tz=zone).strftime('%A')
     if day == 'Monday' or day == 'Thursday':
-      await message.channel.send(file=discord.File('monday.png'))
+      await message.channel.send(file=discord.File('mon_thu.png'))
     if day == 'Tuesday' or day == 'Friday':
-      await message.channel.send(file=discord.File('tuesday.png'))
+      await message.channel.send(file=discord.File('tue_fri.png'))
     if day == 'Wednesday' or day == 'Saturday':
-      await message.channel.send(file=discord.File('wednesday.png'))
+      await message.channel.send(file=discord.File('wed_sat.png'))
     if day == 'Sunday':
-      await message.channel.send(file=discord.File('sunday.png'))
+      await message.channel.send(file=discord.File('sun.png'))
 
 #Uptime Robot
 keep_alive()
