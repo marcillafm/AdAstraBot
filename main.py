@@ -31,7 +31,8 @@ async def on_message(message):
   if message.content.startswith('!daily'):
     day = datetime.now(tz=zone).strftime('%A')
     if day == 'Monday' or day == 'Thursday':
-      await message.channel.send(file=discord.File('mon_thu.png'))
+      await message.channel.send(file=discord.File('mon_thurs1.png'))
+      await message.channel.send(file=discord.File('mon_thurs2.png'))
     if day == 'Tuesday' or day == 'Friday':
       await message.channel.send(file=discord.File('tue_fri.png'))
     if day == 'Wednesday' or day == 'Saturday':
