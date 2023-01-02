@@ -34,11 +34,12 @@ async def on_message(message):
       await message.channel.send(file=discord.File('mon_thurs1.png'))
       await message.channel.send(file=discord.File('mon_thurs2.png'))
     if day == 'Tuesday' or day == 'Friday':
-      await message.channel.send(file=discord.File('tue_fri.png'))
+      await message.channel.send(file=discord.File('tues_fri1.png'))
+      await message.channel.send(file=discord.File('tues_fri2.png'))
     if day == 'Wednesday' or day == 'Saturday':
-      await message.channel.send(file=discord.File('wed_sat.png'))
+      await message.channel.send(file=discord.File('wed_sat1.png'))
+      await message.channel.send(file=discord.File('wed_sat2.png'))
     if day == 'Sunday':
       await message.channel.send(file=discord.File('sun.png'))
-
 #Connect to Discord Bot
 client.run(os.getenv('TOKEN'))
