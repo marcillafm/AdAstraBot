@@ -30,10 +30,6 @@ async def on_message(message):
   if message.content.startswith('!hello'):
     await message.channel.send('Ad Astra Abyssosque! Welcome to the Adventurers\' Guild.') 
 
-  if message.content.startswith('!test'):
-    #with urllib.request.urlopen('https://raw.githubusercontent.com/marcillafm/AdAstraBot/master/mon_thurs1.png') as url:
-    await message.channel.send('https://raw.githubusercontent.com/marcillafm/AdAstraBot/master/mon_thurs1.png')
-    await message.channel.send("done")
 #!Daily command
   if message.content.startswith('!daily'):
     day = datetime.now(tz=zone).strftime('%A')
@@ -49,19 +45,3 @@ async def on_message(message):
 
 #Connect to Discord Bot
 client.run(os.getenv('TOKEN'))
-
-
-"""
-from PIL import Image
-import urllib.request
-
-URL = 'http://www.w3schools.com/css/trolltunga.jpg'
-
-with urllib.request.urlopen(URL) as url:
-    img = Image.open(url)
-    img.show()
-
-    https://raw.githubusercontent.com/marcillafm/AdAstraBot/master/mon_thurs1.png
-
-
-"""
