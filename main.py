@@ -41,5 +41,9 @@ async def on_message(message):
       await message.channel.send(file=discord.File('wed_sat2.png'))
     if day == 'Sunday':
       await message.channel.send(file=discord.File('sun.png'))
+#!Boss command
+  if message.content.startswith('!boss'):
+    await message.channel.send(file=discord.File('boss1.png'))
+    await message.channel.send(file=discord.File('boss2.png'))
 #Connect to Discord Bot
 client.run(os.getenv('TOKEN'))
